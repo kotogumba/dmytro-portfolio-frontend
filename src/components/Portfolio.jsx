@@ -6,13 +6,12 @@ function Portfolio({portfolioRef}) {
   return (
 
     <div className='portfolio' id="portfolio" ref={portfolioRef}>
-      <div className="portfolio-card dark:bg-gray-600">
-        <h1 className="text-3xl dark:text-white">Portfolio</h1>
-        <p className="dark:text-white">Here are some of my projects</p>
+      <div className="portfolio-card dark:bg-neutral-900">
+        <p className="text-3xl dark:text-white">Juniorhub</p>
         <div>
           <div className="portfolio-card-item">
-            <img src={juniorhub} alt="project 1" />
-            <h2 className="dark:text-white">Juniorhub</h2>
+            <img src={juniorhub} alt="project 1" className='rounded'/>
+            
             <p className="dark:text-white">"Juniorhub is a web-based platform built using the Ruby on Rails framework. It was developed by a team of four and serves as a hub for junior developers. The platform features a chat function, notification system, and a blog with comment and like functionality. It also includes a job posting section with the ability to favorite posts and apply filters and search functions. The platform also includes a dashboard for users to keep track of their activity on the site. Overall, Juniorhub aims to provide a centralized location for junior developers to connect, share knowledge, and find job opportunities."</p>
             <div className="links">
               <a className="dark:text-white" href="www.juniorhub.me">URL - www.juniorhub.me</a>
