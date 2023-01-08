@@ -1,21 +1,39 @@
 import React from 'react'
 import './css/main.css'
+import avatar from '../assets/avatar.jpg'
 
 function Main({mainRef}) {
   return (
     <div className="main-wrapper">
       <div className='main dark:bg-neutral-900' id='main' ref={mainRef}>
-        <h1 className='text-3xl font-medium dark:text-gray-300'>Main</h1>
-        <p className='dark:text-gray-300'>This is my portfolio website.</p>
-        <p className='dark:text-gray-300'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac iaculis dolor. Aliquam libero felis, iaculis vehicula malesuada at, porta tristique leo. Sed in mollis urna, a rutrum mi. Aliquam erat volutpat. Vestibulum aliquam nunc vel eros ultrices porttitor. Sed erat massa, commodo vitae tellus feugiat, vulputate vulputate tortor. Vestibulum sagittis fringilla iaculis. In feugiat interdum nisi, eu posuere lacus. Phasellus sed aliquet massa.
+        <div className="main-left">
+          <img src={avatar} alt='Plechun Dmytro' className='.img-fluid'/>
+          <div className="main-links text-base font-light flex flex-column pt-3">
+            <a href="https://www.linkedin.com/in/dmytroplechun" className='dark:text-gray-400'> <i className="fab fa-linkedin"></i> Linkedin</a>
+            <a href="https://github.com/kotogumba" className='dark:text-gray-400'> <i className="fab fa-github"></i> Github</a>
+          </div>
+        </div>
 
-  Nulla id dictum urna. Morbi finibus consectetur nibh, eget suscipit ante. Morbi nec lorem in erat molestie laoreet. In hac habitasse platea dictumst. Curabitur ultrices odio non eleifend varius. Praesent porttitor ex ut ante interdum mattis a ut magna. Vestibulum ut rutrum felis.
-
-  Donec pharetra quam et semper viverra. Morbi lacus leo, pulvinar at dolor ut, efficitur euismod urna. In et tellus odio. Aliquam nec arcu vel lorem fringilla bibendum in non sapien. Mauris quis urna nulla. Suspendisse sed feugiat est, ut dignissim urna. Maecenas ante ligula, sollicitudin nec lorem vitae, viverra vehicula dolor. Sed id dolor tincidunt, ultrices nulla ac, luctus velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras lacus lectus, pretium sit amet neque congue, interdum ornare dolor. Aliquam vitae quam in nisi eleifend molestie. Nullam ut urna eget nisi rutrum tempor sit amet sed nisl. Nam dapibus ipsum eu diam feugiat faucibus.
-
-  Integer a orci ut arcu scelerisque ultrices. Maecenas ac ligula egestas, pharetra orci a, porta sem. Aliquam porttitor quam quam, a porta sem blandit vitae. Quisque ut imperdiet ipsum. Duis consectetur purus at turpis pulvinar, ac tincidunt diam dignissim. Nunc tincidunt quis nulla eu sollicitudin. In eu rutrum velit. Morbi scelerisque elementum dictum.
-
-  In congue iaculis nibh vitae maximus. Nunc efficitur massa risus, a tristique magna tincidunt in. Nulla pulvinar leo augue, nec convallis orci volutpat ut. Morbi scelerisque vestibulum velit, vel iaculis libero tincidunt in. Vestibulum et feugiat ex. Donec euismod libero nunc, nec mollis justo iaculis eget. Vivamus consectetur, mi eu vestibulum consectetur, sapien sapien rhoncus lorem, vitae aliquet felis lacus in tellus. Praesent nec ullamcorper arcu. Duis sed augue vestibulum tortor imperdiet placerat vitae sit amet nulla. Nam et ex felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla quam turpis, dictum id euismod vitae, aliquam nec quam. Donec cursus tristique libero vitae dictum. Nullam quis justo vel mi semper cursus. Nullam sed ornare ipsum. Aliquam ultrices, neque nec imperdiet aliquam, est eros elementum urna, at elementum purus leo sodales arcu.</p>
+        <div className='main-info'>
+          <h1 className='text-3xl font-medium dark:text-gray-300'>Plechun Dmytro</h1>
+          <h2 className='text-sm font-medium dark:text-gray-300'>Full-stack web developer</h2>
+          <p className='mt-3 indent-8 dark:text-gray-300'>
+  With a strong foundation in both front-end and back-end development,
+  I have the skills and knowledge to create dynamic, visually appealing websites
+   that are also highly functional and efficient. Whether you need a simple landing
+    page or a complex web application, I have the experience and expertise to deliver
+     high-quality results.
+          </p>
+          <p className='indent-8 dark:text-gray-300'>
+  My proficiency in Figma allows me to create stunning design mockups that accurately capture the look and feel of your vision. And with my strong command of HTML, CSS, and JavaScript, I can turn those designs into pixel-perfect, responsive web pages that look great on all devices.
+          </p>
+          <p className='indent-8 dark:text-gray-300'>
+  On the back-end, my expertise in Ruby and Ruby on Rails allows me to build robust, scalable applications that can handle even the most demanding workloads. And with my experience in React, I can create fast, dynamic user interfaces that provide a seamless experience for your users.
+          </p>
+          <p className='indent-8 dark:text-gray-300'>
+  Overall, my diverse tech stack and proven track record make me the perfect choice for all your web development needs. Contact me today to see how I can help bring your project to life.
+          </p>
+        </div>
 
       </div>
 
