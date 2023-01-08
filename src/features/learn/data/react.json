@@ -1,0 +1,70 @@
+[
+  {
+  "title": "React",
+  "description": "A JavaScript library for building user interfaces",
+  "lessons": [
+    {
+      "id": "1",
+      "title": "Introduction",
+      "description": "Introduction to React",
+      "video": "https://www.youtube.com/watch?v=DLX62G4lc44",
+      "slides": "https://docs.google.com/presentation/d/1ZCmYxQYsXGSGh2Xz49wIuIj8t63rCtc2/edit#slide=id.p",
+      "body": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with rendering data to the DOM, and so creating React applications usually requires the use of additional libraries for state management and routing. Redux and React Router are respective examples of such libraries."
+    },
+    {
+      "id": "2",
+      "title": "JSX",
+      "description": "JSX",
+      "video": "https://www.youtube.com/watch?v=DLX62G4lc44",
+      "slides": "https://docs.google.com/presentation/d/1ZCmYxQYsXGSGh2Xz49wIuIj8t63rCtc2/edit#slide=id.p",
+      "body": "JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called 'React elements'. These React elements are then used to build the DOM."
+    },
+    {
+      "id": "3",
+      "title": "Components",
+      "description": "Components",
+      "video": "https://www.youtube.com/watch?v=DLX62G4lc44",
+      "slides": "https://docs.google.com/presentation/d/1ZCmYxQYsXGSGh2Xz49wIuIj8t63rCtc2/edit#slide=id.p",
+      "body": "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called 'props') and return React elements describing what should appear on the screen."
+    },
+    {
+      "id": "4",
+      "title": "Props",
+      "description": "Props",
+      "video": "https://www.youtube.com/watch?v=DLX62G4lc44",
+      "slides": "https://docs.google.com/presentation/d/1ZCmYxQYsXGSGh2Xz49wIuIj8t63rCtc2/edit#slide=id.p",
+      "body": "Props are inputs to a React component. They are data passed down from a parent component to a child component. Props are read-only, which means that data coming from the parent should not be changed by child components. If you need to change the data, use state."
+    },
+    {
+      "id": "5",
+      "title": "State",
+      "description": "State",
+      "video": "https://www.youtube.com/watch?v=DLX62G4lc44",
+      "slides": "https://docs.google.com/presentation/d/1ZCmYxQYsXGSGh2Xz49wIuIj8t63rCtc2/edit#slide=id.p",
+      "body": "State is similar to props, but it is private and fully controlled by the component. To make a component stateful, convert a component from a function to a class. The only difference between a function component and a class component is that a class component has a state object. The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders."
+    }
+  ]
+},
+  {
+  "title": "Blockchain",
+  "description": "A decentralized, distributed, and public digital ledger that can record transactions between two parties efficiently and in a verifiable and permanent way.",
+  "lessons": [
+    {
+      "id": "1",
+      "title": "Introduction",
+      "description": "Introduction to Blockchain",
+      "video": "https://www.youtube.com/watch?v=DLX62G4lc44",
+      "slides": "https://docs.google.com/presentation/d/1ZCmYxQYsXGSGh2Xz49wIuIj8t63rCtc2/edit#slide=id.p",
+      "body": "Blockchain is a decentralized, distributed, and public digital ledger that can record transactions between two parties efficiently and in a verifiable and permanent way. Each block in the chain contains a cryptographic hash of the previous block, a timestamp, and transaction data. By design, a blockchain is resistant to modification of the data. It is 'an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way.' For use as a distributed ledger, a blockchain is typically managed by a peer-to-peer network collectively adhering to a protocol for inter-node communication and validating new blocks. Once recorded, the data in any given block cannot be altered retroactively without alteration of all subsequent blocks, which requires consensus of the network majority. Although blockchain records are not unalterable, blockchains may be considered secure by design and exemplify a distributed computing system with high Byzantine fault tolerance. Decentralized consensus has therefore been achieved with a blockchain. This makes blockchains potentially suitable for the recording of events, medical records, and other records management activities, such as identity management, transaction processing, documenting provenance, food traceability or voting."
+    },
+    {
+      "id": "2",
+      "title": "Blockchain Architecture",
+      "description": "Blockchain Architecture",
+      "video": "https://www.youtube.com/watch?v=DLX62G4lc44",
+      "slides": "https://docs.google.com/presentation/d/1ZCmYxQYsXGSGh2Xz49wIuIj8t63rCtc2/edit#slide=id.p",
+      "body": "A blockchain is a distributed database that maintains a continuously growing list of ordered records called blocks. Each block contains a number of transactions and a link to a previous block. A blockchain is typically managed by a peer-to-peer network collectively adhering to a protocol for inter-node communication and validating new blocks. Once recorded, the data in any given block cannot be altered retroactively without alteration of all subsequent blocks, which requires consensus of the network majority. Although blockchain records are not unalterable, blockchains may be considered secure by design and exemplify a distributed computing system with high Byzantine fault tolerance. Decentralized consensus has therefore been achieved with a blockchain. This makes blockchains potentially suitable for the recording of events, medical records, and other records management activities, such as identity management, transaction processing, documenting provenance, food traceability or voting."
+    }
+  ]
+}
+]
