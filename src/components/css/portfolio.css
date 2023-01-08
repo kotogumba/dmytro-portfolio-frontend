@@ -23,8 +23,8 @@
   margin-bottom: 20px;
 }
 
-.portfolio-card-item img {
-  width: 300px;
+.project img {
+  width: 100%;
   height: 150px;
   object-fit: cover;
   object-position: center;

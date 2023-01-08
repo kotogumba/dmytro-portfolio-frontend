@@ -15,8 +15,14 @@ function Personal_card({mainRef}) {
         </div>
 
         <div className='col-12 col-md-8 main-info'>
-          <h1 className='text-3xl font-medium dark:text-gray-300'>Plechun Dmytro</h1>
-          <h2 className='text-sm font-medium dark:text-gray-300'>Full-stack web developer</h2>
+          <h1 className='text-5xl font-medium dark:text-gray-300'>Plechun Dmytro</h1>
+          <h2 className='text-xl font-medium dark:text-gray-300'>Full-stack web developer</h2>
+          <div className='flex flex-row mt-1 align-items-center'>
+            <i className="fa-regular fa-comment dark:text-gray-300 mr-1"></i>
+            <p className='text-sm font-medium dark:text-gray-300 mr-3'>English, Ukrainian, Russian</p>
+            <i class="fa-solid fa-earth-americas dark:text-gray-300 mr-1"></i>
+            <p className='text-sm font-medium dark:text-gray-300'>Remote</p>
+          </div>
           <p className='mt-3 indent-8 dark:text-gray-300'>
             With a strong foundation in both front-end and back-end development,
             I have the skills and knowledge to create dynamic, visually appealing websites
