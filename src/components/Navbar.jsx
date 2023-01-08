@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react';
 import './css/navbar.css'
 import { ThemeContext } from '../App'
+import stand_with_ukraine from '../assets/stand_with_Ukraine.jpg'
 
 function Navbar(props) {
 
@@ -19,9 +20,14 @@ function Navbar(props) {
         <li><a onClick={() => props.changePage('learn')} className={props.activePage === 'learn' ? 'navlink text-gray-900 dark:text-zinc-100' : 'navlink'}><i className="fa-solid fa-graduation-cap "></i><p className="">Learn</p> </a></li>
 
       </ul>
-      <button onClick={() => props.toggleTheme()} className='dark-mode-toggle'>
-          <i className={`fa-solid text-blue-500 dark:text-yellow-500 fa-${props.darkMode ? 'sun' : 'moon'}`}></i>
-      </button>
+      <div className='flex items-center gap-3'>
+        <a href="https://standforukraine.com/" target="_blank" >
+          <img src={stand_with_ukraine} alt="stand for ukraine logo" className="h-10 w-15" />
+        </a>
+        <button onClick={() => props.toggleTheme()} className='dark-mode-toggle'>
+            <i className={`fa-solid text-blue-500 dark:text-yellow-500 fa-${props.darkMode ? 'sun' : 'moon'}`}></i>
+        </button>
+      </div>
     </div>
   )
 }
