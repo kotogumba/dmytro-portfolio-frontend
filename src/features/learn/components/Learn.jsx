@@ -4,7 +4,6 @@ import Course from './Course'
 import '../css/learn.css'
 import data from '../data/react.json'
 
-console.log(data)
 
 function Learn() {
   const [course, setCourse] = React.useState('')
@@ -13,9 +12,7 @@ function Learn() {
   // select course from course data by course name
   const selectCourse = (courseName) => {
     const selectedCourseData = courseData.find((element) => element.title === courseName)
-    console.log(course)
-    console.log(courseName)
-    console.log(courseData)
+    
     return selectedCourseData
   }
 

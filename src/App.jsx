@@ -22,6 +22,11 @@ function App() {
     setDarkMode(!darkMode)
   }
 
+  if (darkMode) {
+    document.body.style.backgroundColor = "black"
+  } else {
+    document.body.style.backgroundColor = "white"
+  }
 
   return (
     <ThemeContext.Provider value={darkMode}>

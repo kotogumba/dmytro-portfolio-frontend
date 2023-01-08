@@ -2,7 +2,6 @@ import React from 'react'
 import '../css/lesson.css'
 
 function lesson(props) {
-  console.log('lessons', props)
   return (
     <div className='lesson'>
       <h1>{props.data.title}</h1>
