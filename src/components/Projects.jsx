@@ -4,8 +4,7 @@ import pets from '../assets/rent_a_pet.jpeg'
 import quizz from '../assets/quizz.jpeg'
 import './css/portfolio.css'
 import ProjectModal from './ProjectModal'
-
-
+import {data} from './projects_data'
 
 function Projects() {
   const project =
@@ -18,11 +17,6 @@ function Projects() {
          <div className="project mb-3">
           <img src={juniorhub} alt="project 1" className='rounded'/>
           <p className='dark:text-gray-400'> Juniorhub</p>
-          {/* <div className="links">
-            <a className="dark:text-white" href="www.juniorhub.me">URL - www.juniorhub.me</a>
-            <a className="dark:text-white" href="https://github.com/kotogumba/juniorhub">Github - https://github.com/kotogumba/juniorhub</a>
-          </div>
-          <p className="dark:text-white">"Juniorhub is a web-based platform built using the Ruby on Rails framework. It was developed by a team of four and serves as a hub for junior developers. The platform features a chat function, notification system, and a blog with comment and like functionality. It also includes a job posting section with the ability to favorite posts and apply filters and search functions. The platform also includes a dashboard for users to keep track of their activity on the site. Overall, Juniorhub aims to provide a centralized location for junior developers to connect, share knowledge, and find job opportunities."</p> */}
         </div>
 
   const project2 =
@@ -35,9 +29,9 @@ function Projects() {
     <div className="portfolio-card dark:bg-neutral-900">
       <p className="text-3xl dark:text-gray-400 mb-3">Projects</p>
       <div className="row justify-content-center">
-        <ProjectModal project={project1} />
-        <ProjectModal project={project2} />
-        <ProjectModal project={project} />
+        <ProjectModal project={project1} projectInfo={data[0]} img={juniorhub}/>
+        <ProjectModal project={project2} projectInfo={data[1]} img={pets}/>
+        <ProjectModal project={project} projectInfo={data[2]} img={quizz}/>
       </div>
     </div>
 

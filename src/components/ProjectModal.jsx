@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Project from './Project'
 
 const style = {
   position: 'absolute',
@@ -14,29 +15,30 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  outline: 0,
 };
 
-export default function BasicModal({project}) {
+export default function BasicModal({project, projectInfo, img}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
-    <div className="col-12 col-md-4">
+    <div className="col-12 col-md-4 ">
       <div onClick={handleOpen}>{project}</div>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        disableScrollLock
       >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+        <Box sx={style} className="dark:bg-gray-800">
+          <img src={img} className="h-36 w-full object-cover"></img>
+          <Typography id="modal-modal-title" variant="h6" component="h2" className="dark:text-gray-400">
+           {projectInfo.name}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <Project projectInfo={projectInfo} />
         </Box>
       </Modal>
     </div>
