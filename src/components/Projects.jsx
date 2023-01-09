@@ -25,19 +25,19 @@ const rent_a_petArray = [pet1, pet2, pet3, pet4, pet5]
 const juniorhubArray = [juniorhub, juniorhub_blogs, juniorhub_chat, juniorhub_job_apps, juniorhub_jobs, juniorhub_profile, juniorhub_profiles]
 function Projects() {
   const project =
-    <div className="project rounded shadow-sm transform transition duration-500 hover:scale-105">
+    <div className="project rounded shadow-lg transform transition duration-500 hover:scale-105">
       <img src={quizz} alt="project 1" className='rounded'/>
       <p className='p-1 dark:text-gray-400'> Quizzical</p>
     </div>
 
   const project1 =
-         <div className="project mb-3 rounded shadow-sm transform transition duration-500 hover:scale-105">
+         <div className="project mb-3 rounded shadow-lg transform transition duration-500 hover:scale-105">
           <img src={juniorhub} alt="project 1" className='rounded'/>
           <p className='p-1 dark:text-gray-400'> Juniorhub</p>
         </div>
 
   const project2 =
-  <div className="project mb-3 shadow-sm rounded transform transition duration-500 hover:scale-105">
+  <div className="project mb-3 shadow-lg rounded transform transition duration-500 hover:scale-105">
     <img src={pets} alt="project 1" className='rounded'/>
     <p className='p-1 dark:text-gray-400'> Rent a Pet</p>
   </div>

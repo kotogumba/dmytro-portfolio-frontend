@@ -5,6 +5,7 @@ import Main from './components/Main'
 import React, { useRef, createContext } from "react";
 import Learn from './features/learn/components/Learn'
 import Button from '@mui/material/Button';
+import Articles from './features/Articles/Articles'
 
 export const ThemeContext = createContext('light');
 
@@ -33,12 +34,13 @@ function App() {
 
   return (
     <ThemeContext.Provider value={darkMode}>
-      <div className="App">
+      <div className="App ">
         <div className="dark:bg-gray-600">
           <Navbar changePage={changePage} activePage={page} darkMode={darkMode} toggleTheme={toggleTheme}/>
-          <div className="container">
+          <div className="container min-h-screen">
             {page === 'main' && <Main mainRef={mainRef} />}
             {page === 'learn' && <Learn />}
+            {page === 'articles' && <Articles />}
           </div>
           <Footer />
         </div>

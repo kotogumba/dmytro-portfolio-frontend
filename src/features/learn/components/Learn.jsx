@@ -1,7 +1,6 @@
 import React from 'react'
 import CourseCard from './CourseCard'
 import Course from './Course'
-import '../css/learn.css'
 import data from '../data/react.json'
 import Alert from '@mui/material/Alert';
 
