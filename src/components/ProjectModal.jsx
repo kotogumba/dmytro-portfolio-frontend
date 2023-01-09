@@ -4,24 +4,21 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Project from './Project'
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-  outline: 0,
-};
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 export default function BasicModal({project, projectInfo, img, imgArray}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
 
   const carouselItems = imgArray.slice(1).map(element => (
     <div class="carousel-item">
@@ -31,43 +28,57 @@ export default function BasicModal({project, projectInfo, img, imgArray}) {
 
   return (
     <div className="col-12 col-md-4 ">
-      <div onClick={handleOpen}>{project}</div>
-      <Modal
+      <div onClick={handleOpen}>
+        {project}
+      </div>
+      <Dialog
+        // fullScreen={fullScreen}
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        aria-labelledby="responsive-dialog-title"
         // disableScrollLock
+        className="dark:bg-gray-800"
       >
-        <Box sx={style} className="dark:bg-gray-800">
-          <button onClick={handleClose}> <i className="fa-solid fa-xmark"></i></button>
+        <div className="dark:bg-gray-800">
 
-          {/* CAROUSEL START */}
+          <DialogTitle id="responsive-dialog-title">
 
-          <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src={imgArray[0]} className="h-36 w-full object-cover"></img>
+          </DialogTitle>
+          <DialogContent >
+            <DialogContentText>
+
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src={imgArray[0]} className="h-50 w-full object-cover"></img>
+                  </div>
+                  {carouselItems}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              {carouselItems}
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-          {/* CAROUSEL END */}
-           <h1 className="text-2xl font-semibold dark:text-gray-300">
-            {projectInfo.name}
-           </h1>
 
-          <Project projectInfo={projectInfo} />
-        </Box>
-      </Modal>
+              <h1 className="text-2xl font-semibold dark:text-gray-300">
+                {projectInfo.name}
+              </h1>
+
+              <Project projectInfo={projectInfo} />
+
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button autoFocus onClick={handleClose}>
+              Close
+            </Button>
+          </DialogActions>
+        </div>
+      </Dialog>
     </div>
   );
 }
