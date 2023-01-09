@@ -37,10 +37,8 @@ function App() {
         <div className="dark:bg-gray-600">
           <Navbar changePage={changePage} activePage={page} darkMode={darkMode} toggleTheme={toggleTheme}/>
           <div className="container">
-            
             {page === 'main' && <Main mainRef={mainRef} />}
             {page === 'learn' && <Learn />}
-
           </div>
           <Footer />
         </div>

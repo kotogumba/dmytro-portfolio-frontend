@@ -27,7 +27,7 @@ export default function BasicModal({project, projectInfo, img, imgArray}) {
   ))
 
   return (
-    <div className="col-12 col-md-4 ">
+    <div className="col-12 col-md-4">
       <div onClick={handleOpen}>
         {project}
       </div>
@@ -37,7 +37,7 @@ export default function BasicModal({project, projectInfo, img, imgArray}) {
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
         // disableScrollLock
-        className="dark:bg-gray-800"
+
       >
         <div className="dark:bg-gray-800">
 

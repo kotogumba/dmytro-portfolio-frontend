@@ -17,7 +17,7 @@ function Navbar(props) {
             <p >Home</p>
           </a>
         </li>
-        <li><a onClick={() => props.changePage('learn')} className={props.activePage === 'learn' ? 'navlink text-gray-900 dark:text-zinc-100' : 'navlink'}><i className="fa-solid fa-graduation-cap "></i><p className="">Learn</p> </a></li>
+        <li><a onClick={() => props.changePage('learn')} className={props.activePage === 'learn' ? 'navlink text-gray-900 dark:text-zinc-100' : 'navlink'}><i className="fa-solid fa-graduation-cap "></i><p className="">Learn Web3</p> </a></li>
 
       </ul>
       <div className='flex items-center gap-3'>
