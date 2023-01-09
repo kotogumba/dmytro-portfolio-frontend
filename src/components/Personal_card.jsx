@@ -20,7 +20,7 @@ function Personal_card({mainRef}) {
           <div className='flex flex-row mt-1 align-items-center'>
             <i className="fa-regular fa-comment dark:text-gray-300 mr-1"></i>
             <p className='text-sm font-medium dark:text-gray-300 mr-3'>English, Ukrainian, Russian</p>
-            <i class="fa-solid fa-earth-americas dark:text-gray-300 mr-1"></i>
+            <i className="fa-solid fa-earth-americas dark:text-gray-300 mr-1"></i>
             <p className='text-sm font-medium dark:text-gray-300'>Remote</p>
           </div>
           <p className='mt-3 indent-8 dark:text-gray-300'>
