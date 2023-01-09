@@ -22,7 +22,7 @@ export default function BasicModal({project, projectInfo, img, imgArray}) {
 
   const carouselItems = imgArray.slice(1).map(element => (
     <div class="carousel-item">
-      <img src={element} className="h-36 w-full object-cover"></img>
+      <img src={element} className="h-50 w-full object-cover"></img>
     </div>
   ))
 
