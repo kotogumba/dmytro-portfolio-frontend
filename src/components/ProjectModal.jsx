@@ -18,10 +18,16 @@ const style = {
   outline: 0,
 };
 
-export default function BasicModal({project, projectInfo, img}) {
+export default function BasicModal({project, projectInfo, img, imgArray}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const carouselItems = imgArray.slice(1).map(element => (
+    <div class="carousel-item">
+      <img src={element} className="h-36 w-full object-cover"></img>
+    </div>
+  ))
 
   return (
     <div className="col-12 col-md-4 ">
@@ -35,8 +41,26 @@ export default function BasicModal({project, projectInfo, img}) {
       >
         <Box sx={style} className="dark:bg-gray-800">
           <button onClick={handleClose}> <i className="fa-solid fa-xmark"></i></button>
-          <img src={img} className="h-36 w-full object-cover"></img>
 
+          {/* CAROUSEL START */}
+
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src={imgArray[0]} className="h-36 w-full object-cover"></img>
+              </div>
+              {carouselItems}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          {/* CAROUSEL END */}
            <h1 className="text-2xl font-semibold dark:text-gray-300">
             {projectInfo.name}
            </h1>
