@@ -36,9 +36,11 @@ export default function BasicModal({project, projectInfo, img}) {
         <Box sx={style} className="dark:bg-gray-800">
           <button onClick={handleClose}> <i className="fa-solid fa-xmark"></i></button>
           <img src={img} className="h-36 w-full object-cover"></img>
-          <Typography id="modal-modal-title" variant="h6" component="h2" className="dark:text-gray-400">
-           {projectInfo.name}
-          </Typography>
+
+           <h1 className="text-2xl font-semibold dark:text-gray-300">
+            {projectInfo.name}
+           </h1>
+
           <Project projectInfo={projectInfo} />
         </Box>
       </Modal>
