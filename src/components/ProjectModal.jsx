@@ -31,9 +31,10 @@ export default function BasicModal({project, projectInfo, img}) {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        disableScrollLock
+        // disableScrollLock
       >
         <Box sx={style} className="dark:bg-gray-800">
+          <button onClick={handleClose}> <i className="fa-solid fa-xmark"></i></button>
           <img src={img} className="h-36 w-full object-cover"></img>
           <Typography id="modal-modal-title" variant="h6" component="h2" className="dark:text-gray-400">
            {projectInfo.name}
